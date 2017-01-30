@@ -1,5 +1,5 @@
 JupyterHub Hook FileManager
-************************
+***************************
 
 Content Manager for Filemanager Jupyterhub with hooks support
 
