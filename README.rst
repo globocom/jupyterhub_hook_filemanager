@@ -63,3 +63,8 @@ In your jupyterhub config file:
 
 
 **pre_save_hook** and **post_save_hook** are specified at default documentation: http://jupyter-notebook.readthedocs.io/en/latest/extending/savehooks.html but should be equal to **update** hooks.
+
+
+## Licensing
+
+JupyterHub Hook FileManager is under [Apache 2 License](./LICENSE)
