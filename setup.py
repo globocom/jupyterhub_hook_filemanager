@@ -51,11 +51,14 @@ setup_args = dict(
 
 setup_args['install_requires'] = install_requires = []
 with open('requirements.txt') as f:
-    for line in f.readlines():
-        req = line.strip()
-        if not req or req.startswith(('-e', '#')):
-            continue
-        install_requires.append(req)
+    try:
+        for line in f.readlines():
+            req = line.strip()
+            if not req or req.startswith(('-e', '#')):
+                continue
+            install_requires.append(req)
+    except:
+        print('File read failed.')
 
 
 def main():
