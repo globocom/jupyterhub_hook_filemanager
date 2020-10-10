@@ -12,10 +12,16 @@ import os
 import sys
 
 v = sys.version_info
+
 if v[:2] < (3,3):
     error = "ERROR: JupyterHub Hook FileManager requires Python version 3.3 or above."
     print(error, file=sys.stderr)
-    sys.exit(1)
+    
+    installPython = input('Are you using a Debian OS base and want install this version of Python? (y/n): ')
+    if (installPython == 'y'):
+        os.system("sudo apt install -y python3.3")
+    else:
+        sys.exit(1)
 
 from setuptools import setup
 
